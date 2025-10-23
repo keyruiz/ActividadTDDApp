@@ -19,5 +19,17 @@ namespace TestActividadTDDApp
             Assert.AreEqual(1, resultado);
         }
 
+
+        [TestMethod]
+        [DataRow(3, 6)]     
+        [DataRow(5, 120)]   
+        [DataRow(7, 5040)]  
+        public void CalcularFactorial_VariosCasos(int n, int esperado)
+        {
+            int resultado = Funciones.CalcularFactorial(n);
+            Assert.AreEqual(esperado, resultado);
+        }
+
+
     }
 }
