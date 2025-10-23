@@ -1,11 +1,15 @@
-﻿namespace TestActividadTDDApp
+﻿using ActividadTDDApp;
+
+namespace TestActividadTDDApp
 {
     [TestClass]
     public sealed class FuncionesTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Factorial_NumeroNegativo()
         {
+            int resultado = Funciones.CalcularFactorial(-5);
+            Assert.AreEqual(-1, resultado);
         }
     }
 }

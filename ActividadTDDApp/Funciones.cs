@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ActividadTDDApp
 {
-    internal class Funciones
+    public class Funciones
     {
     }
 }
