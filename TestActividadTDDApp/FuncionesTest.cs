@@ -30,6 +30,39 @@ namespace TestActividadTDDApp
             Assert.AreEqual(esperado, resultado);
         }
 
+        [TestMethod]
+        public void Contrasena_Null()
+        {
+            bool resultado = Funciones.EsContrasenyaValida(null);
+            Assert.IsFalse(resultado);
+        }
 
+        [TestMethod]
+        public void Contrasena_Vacia()
+        {
+            bool resultado = Funciones.EsContrasenyaValida("");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void Contrasena_Longitud()
+        {
+            bool resultado = Funciones.EsContrasenyaValida("12345#");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void Contrasena_Almohadilla()
+        {
+            bool resultado = Funciones.EsContrasenyaValida("12345678");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        public void Contrasena_True()
+        {
+            bool resultado = Funciones.EsContrasenyaValida("12345678#");
+            Assert.IsTrue(resultado);
+        }
     }
 }
