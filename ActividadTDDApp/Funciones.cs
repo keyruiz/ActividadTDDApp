@@ -14,11 +14,12 @@ namespace ActividadTDDApp
                 return 1;
             if (numero < 0)
                 return -1;
-            if (numero == 3)
-                return 6;
-            if (numero == 5)
-                return 120;
-            return 5040;
+            long result = 1;
+            for (long i = 1; i <= numero; i++)
+            { 
+                result *= i;
+            }
+            return result;
         }
     }
 }
