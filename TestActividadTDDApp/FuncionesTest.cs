@@ -8,14 +8,14 @@ namespace TestActividadTDDApp
         [TestMethod]
         public void Factorial_NumeroNegativo()
         {
-            int resultado = Funciones.CalcularFactorial(-5);
+            long resultado = Funciones.CalcularFactorial(-5);
             Assert.AreEqual(-1, resultado);
         }
 
         [TestMethod]
         public void Factorial_Cero()
         {
-            int resultado = Funciones.CalcularFactorial(0);
+            long resultado = Funciones.CalcularFactorial(0);
             Assert.AreEqual(1, resultado);
         }
 
@@ -24,9 +24,9 @@ namespace TestActividadTDDApp
         [DataRow(3, 6)]     
         [DataRow(5, 120)]   
         [DataRow(7, 5040)]  
-        public void CalcularFactorial_VariosCasos(int n, int esperado)
+        public void CalcularFactorial_VariosCasos(int n, long esperado)
         {
-            int resultado = Funciones.CalcularFactorial(n);
+            long resultado = Funciones.CalcularFactorial(n);
             Assert.AreEqual(esperado, resultado);
         }
 
